@@ -21,8 +21,7 @@ class TodoList extends Component {
     }
     return todos;
   }
-  componentDidUpdate(prevProps, prevState) {
-    console.log('Updated')
+  componentDidUpdate(prevProps, prevState) {// for every update whether it's an update, delete or add
     localStorage.setItem("todos", JSON.stringify(this.state.todos));
   }
   add(todo) {
