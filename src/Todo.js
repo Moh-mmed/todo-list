@@ -16,7 +16,7 @@ class Todo extends Component {
     this.props.removeTodo(this.props.id);
   }
   toggleForm() {
-    this.setState({ isEditing: !this.state.isEditing });
+    this.setState((prevState)=>({ isEditing: !prevState.isEditing}));
   }
   handleUpdate(evt) {
     evt.preventDefault();
